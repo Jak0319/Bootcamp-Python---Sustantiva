@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suma con JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    button {
+      padding: 40px 40px;
+      font-size: 90px;
+      margin: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #botonFijo {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+    }
+
+    #botonIncrementar {
+      background-color: #008CBA;
+      color: white;
+      border: none;
+    }
+
+    #botonIncrementar:hover {
+      background-color: #00568D;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Botón Fijo -->
+<button id="botonFijo">Suma: 0</button>
+
+<!-- Botón que incrementa el contador -->
+<button id="botonIncrementar">Incrementar</button>
+
+<script>
+  // Función para realizar la suma y actualizar el botón fijo
+  function incrementarSuma() {
+    // Obtener el valor actual del contador
+    var contador = parseInt(document.getElementById('botonFijo').innerText.split(' ')[1]);
+
+    // Incrementar el contador
+    contador++;
+
+    // Actualizar el texto del botón fijo con el nuevo valor del contador
+    document.getElementById('botonFijo').innerText = 'Suma: ' + contador;
+  }
+
+  // Agregar un evento al botón de incrementar
+  document.getElementById('botonIncrementar').addEventListener('click', incrementarSuma);
+</script>
+
+</body>
+</html>
+
