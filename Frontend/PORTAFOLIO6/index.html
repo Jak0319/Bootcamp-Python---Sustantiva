@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo con jQuery y Alerta</title>
+  <!-- Incluir la biblioteca jQuery desde un CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+<!-- Frase que lleva a Google.cl al hacer clic -->
+<p id="enlaceGoogle" style="cursor: pointer; color: blue; text-decoration: underline;">Ir a Google.cl</p>
+
+<!-- Script jQuery para redirigir y mostrar una alerta al hacer clic -->
+<script>
+  // Esperar a que el documento esté listo
+  $(document).ready(function() {
+    // Agregar un evento de clic al elemento con el ID 'enlaceGoogle'
+    $('#enlaceGoogle').click(function() {
+      // Mostrar una alerta
+      alert('Has pulsado el enlace..., ahora serás redireccionado a Google.cl!            Que tengas un buen día :)');
+      
+      // Redirigir a la página de Google.cl
+      window.location.href = 'https://www.google.cl';
+    });
+  });
+</script>
+
+</body>
+</html>
